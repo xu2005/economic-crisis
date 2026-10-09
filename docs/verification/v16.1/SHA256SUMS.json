@@ -1,0 +1,92 @@
+[
+  {
+    "file": "BROWSER_ACCEPTANCE.json",
+    "bytes": 2965,
+    "sha256": "986a2438893ccdada154faf8e67ec9d6813a186278ecca84c41e0f1d0d8b6aa8"
+  },
+  {
+    "file": "BUILD_VALIDATION.json",
+    "bytes": 486,
+    "sha256": "a2fa6b3a7ced42cf9b8d48cfa8fe99985d86c234c4ce399fd89d0cba74e96361"
+  },
+  {
+    "file": "OBSERVED_DOWNLOAD_LINKS.json",
+    "bytes": 5703,
+    "sha256": "2192ed3dca7931e34f3c9d0d515b5ba2f78823f3efaa3b8c172f8d219e9fb37d"
+  },
+  {
+    "file": "ONLINE_FILE_VERIFICATION.json",
+    "bytes": 22177,
+    "sha256": "8106eb3e68d2a78d09723dbf48817cf60faa75ea45e92d856d44a707134722e7"
+  },
+  {
+    "file": "PUBLIC_FILE_HASHES.json",
+    "bytes": 2207,
+    "sha256": "961484e4da3ed2093e20d2e583ebbd4ca20dc2441e93f8ffd144305449393978"
+  },
+  {
+    "file": "SOURCE_MANIFEST.json",
+    "bytes": 1185273,
+    "sha256": "2d28bc85fe08c8a10b6cf5f85d918c2057fe2d9370725b75db8e2c65abddda55"
+  },
+  {
+    "file": "V16.1交接记录.md",
+    "bytes": 4293,
+    "sha256": "f1b4533b70ec4c96e517a0602a3fb250e864c1baad1fcadc8aaf79118bf1d110"
+  },
+  {
+    "file": "V16.1发布与线上验收记录.json",
+    "bytes": 3865,
+    "sha256": "48ac0bd484d56c64de0a3a7106b33ff983beee63ca77eabeb11288c1021ac70f"
+  },
+  {
+    "file": "V16.1完整源码.zip",
+    "bytes": 197172231,
+    "sha256": "b41b5ec91dac0f5bf53518acbd245fbbb88264d4f9bedcabf38009ba6f0e2404"
+  },
+  {
+    "file": "V16.1正式研究与证据审计报告.md",
+    "bytes": 5083,
+    "sha256": "ebd51733094d61bb496da189baa215871294a6e6fc31bfd316930b6852102456"
+  },
+  {
+    "file": "V16.1证据审计与交接包.zip",
+    "bytes": 66106107,
+    "sha256": "abae8d720f2b05a971a82e4248984dd63c64696f6ac89ac64cca2bef10332751"
+  },
+  {
+    "file": "V16完整源码_e76ea397.zip",
+    "bytes": 196659187,
+    "sha256": "da308390440533f2dc8cbdb95fcd6a6363be435e8f39aba01c9d34b65c17ef17"
+  },
+  {
+    "file": "验收截图/desktop-159307.png",
+    "bytes": 315368,
+    "sha256": "163102502acea6ba13852fdfeaf3286b7de504419f296d351afbaba33bb42e3f"
+  },
+  {
+    "file": "验收截图/desktop-audit.png",
+    "bytes": 281670,
+    "sha256": "09372f570d439a366261beab50e3e8d3579ba6245bf789835f896537418e6e75"
+  },
+  {
+    "file": "验收截图/desktop-v161-full.png",
+    "bytes": 354829,
+    "sha256": "f2b15836761e07598fe164c00ca65974518150e2a7d4efd11f2f7b647d5793ad"
+  },
+  {
+    "file": "验收截图/desktop-v161.png",
+    "bytes": 355299,
+    "sha256": "ac7dd33ebfa7f3b2e10c164cfd85c342f8948a8cbb39f152ed5f4be16bbc0354"
+  },
+  {
+    "file": "验收截图/desktop-v3-cny.png",
+    "bytes": 328926,
+    "sha256": "59d65fb1fca5bfd0224396dbc81be8fca41041ddac19fb02dd73288cf29ba17e"
+  },
+  {
+    "file": "验收截图/mobile-v3-cny.png",
+    "bytes": 236428,
+    "sha256": "f586d909e1678eb9a2f474a727e9ac89e7d23b57d02bc93c7ec1e21db78bd8ea"
+  }
+]

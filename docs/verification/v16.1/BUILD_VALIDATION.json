@@ -1,0 +1,10 @@
+{
+  "recorded_at_utc": "2026-10-09T17:03:22.365474+00:00",
+  "command": "node Sites 1.0.0/scripts/build-site.mjs",
+  "package_script": "node scripts/clean-build.mjs && tsc -b && vite build && node scripts/build_runtime.mjs",
+  "exit_code": 0,
+  "vite_version": "6.4.4",
+  "modules_transformed": 2747,
+  "qualification": "Build validation only; no formal return verification",
+  "existing_warning": "StudyPages eager and lazy imports prevent separate chunk; build completed"
+}

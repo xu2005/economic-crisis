@@ -1,0 +1,92 @@
+{
+  "research_version": "V16.1",
+  "project_id": "appgprj_6ac60c17d7a08191b1b046e1a152417e",
+  "site_version": 17,
+  "source_commit": "105d126dead921facc0bf08012786e4bfdd8312a",
+  "saved_version": {
+    "id": "appgprj_6ac60c17d7a08191b1b046e1a152417e~appgver_5057fe262a3881918725ec4e97b01670",
+    "project_id": "appgprj_6ac60c17d7a08191b1b046e1a152417e",
+    "version_number": 17,
+    "source": {
+      "commit_sha": "105d126dead921facc0bf08012786e4bfdd8312a"
+    },
+    "archive_storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_0000000045108209802eb101cbf54cf1",
+      "content_hash": "sha256:b246f5fd49665e9b77e80c5e957e811fd6cf92ed2bddfe346a9d43973a7a881f",
+      "size_bytes": 199639040,
+      "file_count": 792
+    },
+    "screenshot_url": null,
+    "deployment_id": null
+  },
+  "deployment": {
+    "id": "appgdep_6ac91b5c9c0c8191b600af08f7b1255c",
+    "project_id": "appgprj_6ac60c17d7a08191b1b046e1a152417e",
+    "title": "Crisis Observatory · 经济危机研究室",
+    "version_id": "appgprj_6ac60c17d7a08191b1b046e1a152417e~appgver_5057fe262a3881918725ec4e97b01670",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6ac60c17d7a08191b1b046e1a152417e",
+    "failure_message": null,
+    "env_set_revision": 1,
+    "updated_at": "2026-10-09T16:50:59.801962+00:00"
+  },
+  "site_after": {
+    "id": "appgprj_6ac60c17d7a08191b1b046e1a152417e",
+    "latest_version_number": 17,
+    "access_mode": "public",
+    "current_live_url": "https://economic-crisis.xuhengyi.chatgpt.site",
+    "automations": [
+      {
+        "id": "Automation_3f39025f680c8191ad8d36fc6208dd52",
+        "title": "危机资本半年复查",
+        "schedule": "BEGIN:VEVENT\nDTSTART;TZID=Asia/Shanghai:20270408T090000\nEND:VEVENT",
+        "timezone": "Asia/Shanghai",
+        "is_enabled": false
+      },
+      {
+        "id": "Automation_f6933d6bc4d48191a643e3d37ad1c42d",
+        "title": "危机资本一年复查",
+        "schedule": "BEGIN:VEVENT\nDTSTART;TZID=Asia/Shanghai:20271008T090000\nEND:VEVENT",
+        "timezone": "Asia/Shanghai",
+        "is_enabled": false
+      },
+      {
+        "id": "Automation_c5342403a48c81918123f08f3ac500de",
+        "title": "危机资本每日证据记录",
+        "schedule": "BEGIN:VEVENT\nDTSTART;TZID=Asia/Shanghai:20261009T073000\nRRULE:FREQ=DAILY\nEND:VEVENT",
+        "timezone": "Asia/Shanghai",
+        "is_enabled": false
+      },
+      {
+        "id": "Automation_6ea6bcdff19881919c7e642eece1a4b9",
+        "title": "经济危机 V3.2 交接续作",
+        "schedule": "BEGIN:VEVENT\nDTSTART;TZID=Asia/Shanghai:20261009T005000\nEND:VEVENT",
+        "timezone": "Asia/Shanghai",
+        "is_enabled": false
+      }
+    ]
+  },
+  "audience_preserved": true,
+  "automations_preserved": true,
+  "old_sites_tar_bytes": "V16 old hosting TAR only service metadata checked; not directly downloaded",
+  "library_bytes_identity": "UNVERIFIED: download links returned 401; verified local copies used",
+  "browser_acceptance": "PARTIAL_POST_PUBLISH_MOBILE_ACCEPTANCE",
+  "model_requirement": "No model setter/independent verifier exposed; GPT-6.1 Sol High not confirmed",
+  "local_packaged_tar": {
+    "uncompressed_bytes": 199659520,
+    "uncompressed_sha256": "f845fd73df50f205c2d60155bd2428c1e7c9c2f5b7d1780120660a9fe6684614",
+    "matches_service_digest": false,
+    "matches_service_size": false,
+    "limit": "Local package and native archive have distinct raw archive bytes; native TAR has not been directly downloaded. Do not conflate archive hashes."
+  },
+  "online_download_sha": {
+    "new_public_files": 22,
+    "passed": 40,
+    "failed": 0
+  }
+}

@@ -1,0 +1,150 @@
+[
+  {
+    "name": "数据可得性审计报告",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/v15-data-evidence-20261009/DATA_AVAILABILITY_AUDIT.md"
+  },
+  {
+    "name": "来源与原始字节SHA目录",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/v15-data-evidence-20261009/source-manifest.json"
+  },
+  {
+    "name": "数据核验及研究准入记录",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/v15-data-evidence-20261009/DATA_TEST_RECORD.json"
+  },
+  {
+    "name": "本轮网站测试记录",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/v15-data-evidence-20261009/WEB_TEST_RECORD.json"
+  },
+  {
+    "name": "TASK_A_REVISED_REPORT.md",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/work-audit-20261009/TASK_A_REVISED_REPORT.md"
+  },
+  {
+    "name": "evidence.py",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/work-audit-20261009/task-a/evidence.py"
+  },
+  {
+    "name": "distribution_events.supplemented.json",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/work-audit-20261009/task-a/distribution_events.supplemented.json"
+  },
+  {
+    "name": "经济危机_V3.2_Round4_独立补证与交接包.zip",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/work-audit-20261009/originals/task-a/%E7%BB%8F%E6%B5%8E%E5%8D%B1%E6%9C%BA_V3.2_Round4_%E7%8B%AC%E7%AB%8B%E8%A1%A5%E8%AF%81%E4%B8%8E%E4%BA%A4%E6%8E%A5%E5%8C%85.zip"
+  },
+  {
+    "name": "数据可得性审计报告",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/v15-data-evidence-20261009/DATA_AVAILABILITY_AUDIT.md"
+  },
+  {
+    "name": "来源与原始字节SHA目录",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/v15-data-evidence-20261009/source-manifest.json"
+  },
+  {
+    "name": "数据核验及研究准入记录",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/v15-data-evidence-20261009/DATA_TEST_RECORD.json"
+  },
+  {
+    "name": "本轮网站测试记录",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/v15-data-evidence-20261009/WEB_TEST_RECORD.json"
+  },
+  {
+    "name": "TASK_B_RESEARCH.md",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/work-audit-20261009/TASK_B_RESEARCH.md"
+  },
+  {
+    "name": "protocol.json",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/work-audit-20261009/task-b/protocol.json"
+  },
+  {
+    "name": "strategy.py",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/work-audit-20261009/task-b/strategy.py"
+  },
+  {
+    "name": "test_strategy.py",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/work-audit-20261009/task-b/test_strategy.py"
+  },
+  {
+    "name": "数据可得性审计报告",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/v15-data-evidence-20261009/DATA_AVAILABILITY_AUDIT.md"
+  },
+  {
+    "name": "来源与原始字节SHA目录",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/v15-data-evidence-20261009/source-manifest.json"
+  },
+  {
+    "name": "数据核验及研究准入记录",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/v15-data-evidence-20261009/DATA_TEST_RECORD.json"
+  },
+  {
+    "name": "本轮网站测试记录",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/v15-data-evidence-20261009/WEB_TEST_RECORD.json"
+  },
+  {
+    "name": "THREE_TASK_AUDIT.md",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/work-audit-20261009/THREE_TASK_AUDIT.md"
+  },
+  {
+    "name": "TASK_C_ACCEPTANCE.md",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/work-audit-20261009/TASK_C_ACCEPTANCE.md"
+  },
+  {
+    "name": "TEST_RECORD.json",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/work-audit-20261009/TEST_RECORD.json"
+  },
+  {
+    "name": "frozen-baseline.json",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/work-audit-20261009/frozen-baseline.json"
+  },
+  {
+    "name": "acquisition-record.json",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/work-audit-20261009/evidence/acquisition-record.json"
+  },
+  {
+    "name": "complete-review.zip",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/work-audit-20261009/complete-review.zip"
+  },
+  {
+    "name": "V16.1 正式研究报告",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/crisis-v161/FINAL_REPORT.md"
+  },
+  {
+    "name": "来源与原始字节 SHA 清单",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/crisis-v161/RAW_DATA_MANIFEST.json"
+  },
+  {
+    "name": "点时可得性核验",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/crisis-v161/POINT_IN_TIME_VALIDATION.json"
+  },
+  {
+    "name": "行情与分红审计",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/crisis-v161/ETF_PRICE_AND_DIVIDEND_AUDIT.json"
+  },
+  {
+    "name": "税务和费用审计",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/crisis-v161/TAX_AND_COST_AUDIT.md"
+  },
+  {
+    "name": "两条研究线资格判定",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/crisis-v161/BACKTEST_QUALIFICATION.json"
+  },
+  {
+    "name": "本轮实际测试记录",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/crisis-v161/TEST_REPORT.json"
+  },
+  {
+    "name": "未解决问题与停止条件",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/crisis-v161/UNRESOLVED_BLOCKERS.md"
+  },
+  {
+    "name": "资金与准入参考代码",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/crisis-v161/evidence_guard.py"
+  },
+  {
+    "name": "合成检查代码",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/crisis-v161/test_guard.py"
+  },
+  {
+    "name": "复现说明",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site/crisis-v161/REPRODUCE.md"
+  }
+]

@@ -1,6 +1,6 @@
 # 部署说明
 
-更新时间：2026-10-09（北京时间）。
+更新时间：2026-10-10（北京时间；初版 2026-10-09）。
 适用范围：本公开归档副本（GitHub：`xu2005/economic-crisis`，整理提交 `0c42d01`「Prepare public project archive」）。
 
 ## 1. 副本定位
@@ -9,8 +9,8 @@
 
 | 项目 | 线上站点 | 本公开副本 |
 |---|---|---|
-| 位置 | https://economic-crisis.xuhengyi.chatgpt.site （Sites 项目，当前版本 16） | 本仓库 `main` 分支 |
-| 页面与交互代码 | V16 部署版 | 同一修订（已抽查页面标记与样式规则一致） |
+| 位置 | https://economic-crisis.xuhengyi.chatgpt.site （Sites 项目，当前版本 17 = V16.1） | 本仓库 `main` 分支 |
+| 页面与交互代码 | V16.1 部署版（含 `#/studies/v161` 专题等新页面） | V16 公开剥离版；**尚未纳入 V16.1 新增页面**（`StudyPages`、`V161Evidence` 等） |
 | 沪深300 15 年历史行情 | 随站点一起打包 | **已剥离**：`src/data/hs300-history.public-placeholder.json` 为空结构占位（`asset`/`sse` 为空数组） |
 | 回测页表现 | 完整回测（图表、成交记录、下载） | 显示"原始行情序列未纳入公开仓库"的替代提示 |
 | `public/backtest/` 下载文件 | 有 | 无 |
@@ -19,7 +19,7 @@
 
 依据：`UPLOAD_MANIFEST.md` 与 `docs/releases/V16_发布与线上验收记录.json`（`raw_series_public=false`）。
 
-边界说明：同步核验为抽查性质（页面标记、CSS 规则、上述两个数据文件哈希）；**未**对 V16 托管档案做全量逐字节比对，因此不宣称本副本与线上完全等同，也不宣称可直接替换线上部署。
+边界说明：同步核验为抽查性质（页面标记、CSS 规则、上述两个数据文件哈希）；**未**对托管档案做全量逐字节比对，因此不宣称本副本与线上完全等同，也不宣称可直接替换线上部署。2026-10-10 线上已发布 V16.1（平台版本 17），本副本源码仍停在 V16 公开剥离版，两者差异见上表。
 
 ## 2. 环境要求
 
@@ -55,7 +55,10 @@ npx vite build
 ## 6. 发布记录索引
 
 - `docs/releases/V15_发布与线上验收记录.json`：站点版本 15（提交 `7ca8d21`）
-- `docs/releases/V16_发布与线上验收记录.json`：站点版本 16（提交 `e76ea39`），当前线上
+- `docs/releases/V16_发布与线上验收记录.json`：站点版本 16（提交 `e76ea39`）
+- `docs/releases/V16.1_发布与线上验收记录.json`：站点版本 17（V16.1，提交 `105d126d`），当前线上
+- `docs/research/V16.1正式研究与证据审计报告.md`、`docs/history/V16.1交接记录.md`：V16.1 研究与交接记录
+- `docs/verification/v16.1/`：V16.1 发布期验收与校验记录（浏览器验收、构建验证、线上下载哈希、源码清单等，含 `acceptance/` 截图）；其中移动端自动验收未闭环、下载按钮事件未确认，按原始记录保留，未标记为通过
 - 本副本的整理范围与排除清单见 `UPLOAD_MANIFEST.md`；阶段状态见 `docs/project-status.md`
 
 ## 7. 边界声明

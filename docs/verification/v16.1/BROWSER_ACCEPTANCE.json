@@ -1,0 +1,101 @@
+{
+  "stage": "POST_PUBLISH",
+  "desktop": [
+    {
+      "route": "v3-cny",
+      "title": "V3.x人民币税后可实施性研究",
+      "url": "https://economic-crisis.xuhengyi.chatgpt.site/#/studies/v3-cny",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "horizontal_overflow": false,
+      "download_count": 8,
+      "method": "Actual AX navigation click and DOM read; recorded from completed earlier tool results"
+    },
+    {
+      "route": "159307",
+      "title": "159307红利低波ETF独立策略研究",
+      "url": "https://economic-crisis.xuhengyi.chatgpt.site/#/studies/159307",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "horizontal_overflow": false,
+      "download_count": 8,
+      "method": "Actual AX navigation click and DOM read; recorded from completed earlier tool results"
+    },
+    {
+      "route": "audit",
+      "title": "研究审计、测试与交接记录",
+      "url": "https://economic-crisis.xuhengyi.chatgpt.site/#/studies/audit",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "horizontal_overflow": false,
+      "download_count": 10,
+      "method": "Actual AX navigation click and DOM read; recorded from completed earlier tool results"
+    },
+    {
+      "route": "v161",
+      "title": "真实历史数据与资格审计",
+      "url": "https://economic-crisis.xuhengyi.chatgpt.site/#/studies/v161",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "horizontal_overflow": false,
+      "download_count": 11,
+      "method": "Actual AX navigation click and DOM read; recorded from completed earlier tool results"
+    }
+  ],
+  "mobile": [
+    {
+      "route": "v3-cny",
+      "title": "V3.x人民币税后可实施性研究",
+      "viewport": [
+        390,
+        844
+      ],
+      "download_count": 8,
+      "horizontal_overflow": false,
+      "status": "CONFIRMED"
+    },
+    {
+      "route": "159307",
+      "title": "159307红利低波ETF独立策略研究",
+      "viewport": [
+        390,
+        844
+      ],
+      "download_count": 8,
+      "status": "CONFIRMED_TITLE_AND_LINKS"
+    },
+    {
+      "route": "audit",
+      "status": "UNVERIFIED_BROWSER_TIMEOUT"
+    },
+    {
+      "route": "v161",
+      "status": "UNVERIFIED_BROWSER_TIMEOUT"
+    }
+  ],
+  "download_clicks": [],
+  "limits": [
+    "Browser viewport simulation, not physical phone",
+    "Temporary browser command timeouts recovered; only confirmed final page states accepted",
+    "Desktop viewport screenshots may clip to host surface; full-page captures retained"
+  ],
+  "prepublish_v161_mobile": {
+    "status": "VISUAL_PASS",
+    "viewport": [
+      390,
+      844
+    ],
+    "snapshots": "Included reports/crisis-v161/visual"
+  },
+  "download_clicks_status": "UNVERIFIED_NO_CONFIRMED_EVENT",
+  "temporary_viewport": "RESET",
+  "overall": "PARTIAL_POST_PUBLISH_MOBILE_ACCEPTANCE"
+}
