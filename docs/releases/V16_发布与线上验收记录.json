@@ -1,0 +1,72 @@
+{
+  "release_id": "V15-DATA-EVIDENCE-20261009-R1",
+  "research_label": "V15真实历史数据补证专项",
+  "site_version": 16,
+  "commit_sha": "e76ea39782eb2abf8c65d8a4a82ad290b0505ab5",
+  "version_id": "appgprj_6ac60c17d7a08191b1b046e1a152417e~appgver_d5bf27e0418481918b55848f262665d4",
+  "deployment": {
+    "id": "appgdep_6ac8bbb27dac8191b92a9b8d6a5b8731",
+    "status": "succeeded",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site",
+    "updated_at": "2026-10-09T10:03:02.311239+00:00"
+  },
+  "archive": {
+    "sha256": "sha256:5c4b5ab9af170a6b5a811665a70b8c27880971c98cd6630b42a73d649adccc57",
+    "size_bytes": 199516160
+  },
+  "base_version": 15,
+  "base_commit": "7ca8d212b7f27194521f0f4d761c472017514f9a",
+  "live_checks": [
+    {
+      "url": "https://economic-crisis.xuhengyi.chatgpt.site/#/studies/v3-cny",
+      "status": "PASS",
+      "verified": "Clicked from homepage; actual title and V15-DATA-EVIDENCE section, 20/615/201/7 counts, BLOCKED shown"
+    },
+    {
+      "url": "https://economic-crisis.xuhengyi.chatgpt.site/#/studies/159307",
+      "status": "PASS",
+      "verified": "Clicked study entry; actual section and intraday/postclose note shown"
+    },
+    {
+      "url": "https://economic-crisis.xuhengyi.chatgpt.site/#/studies/audit",
+      "status": "PASS",
+      "verified": "Clicked study entry; source/report/test links and original B/C missing status shown"
+    }
+  ],
+  "viewport": {
+    "width": 1363,
+    "height": 936
+  },
+  "pc_page_overflow": false,
+  "mobile_visual": "NOT_EXECUTED: no supported viewport resize/emulation API",
+  "formal_backtests": "NOT_EXECUTED_DATA_GATE",
+  "implementation_status": "IMPLEMENTATION BLOCKED",
+  "frozen_baseline_files_unchanged": 2083,
+  "old_v15_audit_files_unchanged": 128,
+  "technical_test_executions": {
+    "pass": 30,
+    "fail": 0,
+    "code_unit": 13,
+    "code_integration": 7,
+    "data_checks": 10
+  },
+  "build": "PASS",
+  "audience_change": false,
+  "raw_series_public": false,
+  "online_download_byte_verification": [
+    {
+      "file": "DATA_AVAILABILITY_AUDIT.md",
+      "status": "PASS",
+      "sha256": "115e1e723c4256ccc1b08c3f2113a8b69889b84de43d755b072ba1848e435c52"
+    },
+    {
+      "file": "WEB_TEST_RECORD.json",
+      "status": "PASS",
+      "sha256": "d86a71d0dd7d1c7b7465945c9bda4659be53b06d0156b4f937c6fcd905b38077"
+    }
+  ],
+  "screenshot": {
+    "file": "V16真实数据补证_在线审计验收.jpg",
+    "sha256": "9c48d7fd1c3dba99be553255381a801e213e852610d6182d9a603cc2d99d277f"
+  }
+}

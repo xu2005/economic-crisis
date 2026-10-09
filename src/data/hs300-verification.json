@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "independentImplementations": [
+    "TypeScript state machine",
+    "Python closed-form budgets and holding ledger"
+  ],
+  "historicalRuns": 7,
+  "dailyRowsPerRun": 3641,
+  "comparedFields": 204435,
+  "maxAbsoluteDifference": 5.820766091346741e-11,
+  "tolerance": 1e-07,
+  "checks": [
+    "fill date and price",
+    "next-session causality",
+    "tier uniqueness",
+    "all daily cash/units/equity/drawdown/anchor",
+    "daily capital conservation",
+    "portfolio return/CAGR/max drawdown"
+  ]
+}

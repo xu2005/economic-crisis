@@ -1,0 +1,5 @@
+export const notes = [
+  { id: 'evidence-first', title: '先记录证据，再更新判断', summary: '一个图表的来源、日期与单位，比它是否看起来像Dashboard更重要。', evidence: 'Interpretation' as const, updatedAt: '2026-10-07', topics: ['方法'], related: ['methodology'], body: ['本次整理保留“事实 → 数据 → 解释 → 假设 → 情景 → 判断”的区分。每个指标同时存储值、日期、来源与更新日期。', '尚未导入的序列显示Awaiting data，不使用随机数补出走势图。原网页未取得时，也不把新模型称为完整迁移。'], sources: ['用户研究纲要'] },
+  { id: 'shovels', title: '卖铲子者的盈利，证明了什么', summary: '供应商收入证明了采购需求，资本链终端的现金回报需要另行验证。', evidence: 'Hypothesis' as const, updatedAt: '2026-10-07', topics: ['AI', '资本周期'], related: ['ai-capital'], body: ['GPU企业、模型公司、运营商与债权人的收益来自不同合约和客户。收入、利润、自由现金流、资本回报和债务服务不可互换。', '反方观点：需求扩张与成本下降可以吸收产能。观察终端付费需求、利用率和现金流，而非仅用供应链采购额下结论。'], sources: ['用户研究纲要', 'AI资本周期页面列出的BIS研究'] },
+  { id: 'cash-option', title: '现金保留是一种行动能力', summary: '浅跌投入少，深跌保留现金：预算曲线表达的是取舍。', evidence: 'Scenario' as const, updatedAt: '2026-10-07', topics: ['模型', '个人韧性'], related: ['resilience'], body: ['γ大于1的幂律模型让累计部署随回撤加速。它能描述预算纪律，不能证明触底，更不能消除更深回撤和就业冲击。', '生活缓冲与投资本金应分开；触发参考指数与实际ETF表现也应分开。原网页的时间与估值细则仍待核对。'], sources: ['用户研究纲要'] },
+];

@@ -1,0 +1,126 @@
+{
+  "release_id": "WORK-AUDIT-20261009-R1",
+  "site": {
+    "id": "appgprj_6ac60c17d7a08191b1b046e1a152417e",
+    "title": "Crisis Observatory · 经济危机研究室",
+    "slug": "economic-crisis",
+    "current_live_url": "https://economic-crisis.xuhengyi.chatgpt.site",
+    "access_mode": "public",
+    "previous_version_number": 14
+  },
+  "version": {
+    "id": "appgprj_6ac60c17d7a08191b1b046e1a152417e~appgver_407a90bdd0a48191b4d49356a2f32183",
+    "project_id": "appgprj_6ac60c17d7a08191b1b046e1a152417e",
+    "version_number": 15,
+    "source": {
+      "commit_sha": "7ca8d212b7f27194521f0f4d761c472017514f9a"
+    },
+    "archive_storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_00000000a69082099414bca3c1e662b7",
+      "content_hash": "sha256:073e49b84fd4a10a6878666333fd88413d6961c38dd13068259a2031be61513c",
+      "size_bytes": 199464960,
+      "file_count": 761
+    },
+    "screenshot_url": null,
+    "deployment_id": null
+  },
+  "deployment": {
+    "id": "appgdep_6ac875b0e2c08191985be77825c08371",
+    "project_id": "appgprj_6ac60c17d7a08191b1b046e1a152417e",
+    "title": "Crisis Observatory · 经济危机研究室",
+    "version_id": "appgprj_6ac60c17d7a08191b1b046e1a152417e~appgver_407a90bdd0a48191b4d49356a2f32183",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://economic-crisis.xuhengyi.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6ac60c17d7a08191b1b046e1a152417e",
+    "failure_message": null,
+    "env_set_revision": 1,
+    "updated_at": "2026-10-09T05:04:06.701941+00:00"
+  },
+  "source_commit": "7ca8d212b7f27194521f0f4d761c472017514f9a",
+  "online_acceptance": {
+    "v3": {
+      "url": "https://economic-crisis.xuhengyi.chatgpt.site/#/studies/v3-cny",
+      "headings": [
+        "V3.x人民币税后可实施性研究",
+        "冻结研究与现实实施",
+        "Round 4分红证据复核",
+        "本轮代码修正",
+        "新增人民币观察名单"
+      ],
+      "viewport": {
+        "height": 936,
+        "scrollWidth": 1348,
+        "width": 1363
+      },
+      "status": "PASS_LOADED"
+    },
+    "strategy": {
+      "url": "https://economic-crisis.xuhengyi.chatgpt.site/#/studies/159307",
+      "checks": [
+        {
+          "dividendYield": "2.99",
+          "bondYield": "2",
+          "output": "规则输出\n\n0.9900个百分点 · 清仓"
+        },
+        {
+          "dividendYield": "3",
+          "bondYield": "2",
+          "output": "规则输出\n\n1.0000个百分点 · 维持持仓、不追加"
+        },
+        {
+          "dividendYield": "3.5",
+          "bondYield": "2",
+          "output": "规则输出\n\n1.5000个百分点 · 维持持仓、不追加"
+        },
+        {
+          "dividendYield": "3.5001",
+          "bondYield": "2",
+          "output": "规则输出\n\n1.5001个百分点 · 正常定投"
+        },
+        {
+          "dividendYield": "5",
+          "bondYield": "2",
+          "output": "规则输出\n\n3.0000个百分点 · 正常定投"
+        },
+        {
+          "dividendYield": "5.0001",
+          "bondYield": "2",
+          "output": "规则输出\n\n3.0001个百分点 · 双倍定投"
+        }
+      ]
+    },
+    "audit": {
+      "url": "https://economic-crisis.xuhengyi.chatgpt.site/#/studies/audit",
+      "headings": [
+        "研究审计、测试与交接记录",
+        "三任务验收状态",
+        "实际执行的测试",
+        "版本与冻结资料"
+      ],
+      "status": "PASS_LOADED"
+    },
+    "checked_at": "2026-10-09T05:07:25.501Z",
+    "mobile": {
+      "status": "NOT_EXECUTED",
+      "reason": "Cloud-browser viewport switching not supported/effective; responsive source checks only."
+    },
+    "download": {
+      "browser_path": "/home/oai/share/ef252e46-fb4b-4cc0-a7cd-164ed91f14e4/e2608633-52fb-41e9-8796-8a53ec38a05a",
+      "status": "PASS_BYTE_IDENTICAL",
+      "sha256": "87b7dad701170d85126389c744a9689e71baf3a8b86a26c48cd1395565b2fda8",
+      "deployed_source_sha256": "87b7dad701170d85126389c744a9689e71baf3a8b86a26c48cd1395565b2fda8"
+    }
+  },
+  "overall_acceptance": "PARTIAL_BLOCKED",
+  "freeze_files_unchanged": 2083,
+  "tests_passed_executions": 279,
+  "tests_failed": 0,
+  "mobile_visual_acceptance": "NOT_EXECUTED",
+  "original_B_C_audit": "NOT_EXECUTED_SOURCE_MISSING",
+  "commit_record": "commit 7ca8d212b7f27194521f0f4d761c472017514f9a\nAuthor:     Codex <codex@openai.com>\nAuthorDate: Fri Oct 9 14:02:17 2026 +0900\nCommit:     Codex <codex@openai.com>\nCommitDate: Fri Oct 9 14:02:17 2026 +0900\n\n    Update Site source\n",
+  "worktree_clean": true
+}

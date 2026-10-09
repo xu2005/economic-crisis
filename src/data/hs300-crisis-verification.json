@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "runs": 12,
+  "comparedFields": 131076,
+  "maxAbsoluteDifference": 2.0372681319713593e-10,
+  "prefixDates": [
+    "2012-04-30",
+    "2015-08-26",
+    "2021-03-31",
+    "2024-10-08"
+  ]
+}

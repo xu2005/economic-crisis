@@ -1,0 +1,60 @@
+import { useEffect, useMemo, useState } from 'react';
+import { flushSync } from 'react-dom';
+import { Link } from 'react-router-dom';
+import { Button, Badge } from '@fluentui/react-components';
+import { ArrowCounterclockwise24Regular } from '@fluentui/react-icons';
+import type { EChartsOption } from 'echarts';
+import { baseline, ladder, validate, scenarioValue, anchorDrawdown, type PyramidParameters, type Allocation } from '../../models/hs300/engine';
+import Chart from '../../components/Chart';
+import { PageHeading, Notice, NumberField, num, PrintButton, ExportButton, downloadCsv, Evidence } from '../../components/common';
+import { ModelDocumentation } from '../ModelPages';
+import { models } from '../../data/registry';
+import { registerWebTool } from '../../utils/webmcp';
+const allocations: { id: Allocation; title: string }[] = [{ id: 'power', title: '幂律 · γ可调' }, { id: 'equal', title: '等额分档' }, { id: 'geometric', title: '几何增量 · r=1.3' }];
+const guardrails = [
+  ['Drawdown / Anchor', '上证触发、沪深300持仓；原文快照锚点3930.12不能用于2011年。历史初始化约定另列。'],
+  ['Anchor ratchet', '每63自然日更新max(old×0.97,窗口最高收盘)。公式可以上调，和单向下移描述冲突。'],
+  ['Time gate', '启动：20交易日跌10%、年化下跌速度60%或上证低于3500；字面门槛与替代解释分开回测。'],
+  ['Drawdown velocity', '速率乘数1.2/1/0.75/0.5/0；n的起算有歧义，回测公开两种解释。'],
+  ['Valuation factor', 'ε=clamp(1+1.2×(1.437−PB)/0.437,0.8,1.4)。PB=1.149实际封顶1.4；历史PB缺失。'],
+  ['PE / PB cross-check', '原文2026-09-04快照PE13.68、PB1.437；未当作历史逐日估值输入。'],
+  ['ERP', '1/PE减10年国债收益率；极值区未定义、历史完整序列缺失，回测停用该信号。'],
+  ['Cooling period', '至少42交易日休眠；S1≥63与三个月内解释冲突，分别列结果。'],
+  ['左侧加仓', '按5%阶梯及幂律增量；冻结重分配、S4分笔与剩余现金约束已在解释版实现。'],
+  ['右侧确认', '至少两项价格/量能/波动率信号，剩余预算40%/30%/30%；ERP项未启用。'],
+];
+const scenarioDefaults = [
+  { id: 'A', name: '浅跌后修复', drawdown: 15, terminal: 100, sensitivity: 1 },
+  { id: 'B', name: '深跌后修复', drawdown: 40, terminal: 100, sensitivity: 1 },
+  { id: 'C', name: '超过最大档位', drawdown: 55, terminal: 45, sensitivity: 1 },
+];
+export default function HS300() {
+  const [params, setParams] = useState<PyramidParameters>({ ...baseline });
+  const [scenarios, setScenarios] = useState(scenarioDefaults.map(s => ({ ...s })));
+  const [anchor, setAnchor] = useState(4000), [current, setCurrent] = useState(3000);
+  useEffect(() => registerWebTool({
+    name: 'configure_hs300_budget', title: '配置沪深300预算实验',
+    description: '更新页面可见的幂律预算参数并返回计算结果。只配置研究实验，不执行交易；不包含原文缺失的门控规则。',
+    inputSchema: { type: 'object', properties: { capital: { type: 'number', minimum: 1, maximum: 1e9 }, gamma: { type: 'number', exclusiveMinimum: 0, maximum: 5 }, maxDrawdown: { type: 'number', exclusiveMinimum: 0, exclusiveMaximum: 100 }, step: { type: 'number', exclusiveMinimum: 0 }, deployment: { type: 'number', minimum: 0, maximum: 100 } }, required: ['capital', 'gamma', 'maxDrawdown', 'step', 'deployment'], additionalProperties: false },
+    annotations: { readOnlyHint: false, untrustedContentHint: false },
+    execute(raw) {
+      if (!raw || typeof raw !== 'object' || Array.isArray(raw)) throw new Error('需要完整参数对象。');
+      const data = raw as Record<string, unknown>; const keys = ['capital', 'gamma', 'maxDrawdown', 'step', 'deployment'];
+      if (Object.keys(data).length !== keys.length || keys.some(k => typeof data[k] !== 'number')) throw new Error('参数字段或类型不正确。');
+      const p = data as unknown as PyramidParameters; const error = validate(p); if (error) throw new Error(error);
+      const rows = ladder(p); flushSync(() => setParams({ ...p }));
+      return { status: 'configured', kind: 'Model output', levels: rows.length, maximumBudget: rows.at(-1)!.cumulative, firstIncrement: rows[0].increment, originalGates: 'Source pending' };
+    }
+  }), []);
+  const error = validate(params); const rows = useMemo(() => error ? [] : ladder(params), [params, error]);
+  const comparisons = useMemo(() => error ? [] : allocations.map(a => ({ ...a, rows: ladder(params, a.id) })), [params, error]);
+  const option = useMemo<EChartsOption>(() => ({ tooltip: { trigger: 'axis', valueFormatter: v => typeof v === 'number' ? num(v, 0) + '元' : String(v) }, legend: { top: 0, textStyle: { fontSize: 12 }, itemWidth: 18 }, grid: { left: 12, right: 16, top: 60, bottom: 20, containLabel: true }, xAxis: { type: 'category', name: '参考回撤 / %', nameLocation: 'middle', nameGap: 32, data: rows.map(r => '−' + r.drawdown), axisLabel: { hideOverlap: true } }, yAxis: { type: 'value', name: '累计预算 / RMB', axisLabel: { formatter: (v: number) => num(v / 1000) + 'k' } }, series: comparisons.map(a => ({ type: 'line', name: a.title, data: a.rows.map(r => Math.round(r.cumulative)), smooth: false, symbolSize: 5, lineStyle: { width: a.id === 'power' ? 3 : 2 } })) }), [rows, comparisons]);
+  const scenarioResults = useMemo(() => scenarios.map(s => {
+    try { if (error || s.drawdown < 0 || s.drawdown > 99 || s.terminal <= 0 || s.sensitivity < 0) throw new Error('请检查情景输入'); return { scenario: s, results: allocations.map(a => ({ ...a, ...scenarioValue(params, a.id, s.drawdown, s.terminal, s.sensitivity) })), error: null }; } catch { return { scenario: s, results: [], error: '情景参数无效，或假设入场价格不大于0。' }; }
+  }), [scenarios, params, error]);
+  const referenceValid = [anchor, current].every(v => Number.isFinite(v) && v > 0);
+  const update = (key: keyof PyramidParameters, value: number) => setParams(p => ({ ...p, [key]: value }));
+  const updateScenario = (index: number, key: 'drawdown' | 'terminal' | 'sensitivity', value: number) => setScenarios(s => s.map((x, i) => i === index ? { ...x, [key]: value } : x));
+  const reset = () => { setParams({ ...baseline }); setScenarios(scenarioDefaults.map(s => ({ ...s }))); setAnchor(4000); setCurrent(3000); };
+  return <div className="page model-page"><div className="page-breadcrumb"><Link to="/models">模型实验室</Link> / 沪深300</div><PageHeading eyebrow="HS300 CRISIS PYRAMID" title="沪深300危机倒金字塔" summary="目标不是预测最低点，而是在严重危机中保持继续行动的能力。" action={<PrintButton />} /><div className="tag-row"><Badge color="subtle" appearance="tint">基准公式可运行</Badge><Badge color="warning" appearance="tint">原文已核对 · PB历史缺口</Badge><span>任务指定Snapshot · 2026-09-04</span></div><Notice title="原文与历史回测已接入">原HTML及两份上证回撤表已保存并核对。原文2026-09-04快照上证3930.12、沪深3004548.05与行情一致；成本和PB示例有错误，完整历史PB/ERP及若干规则定义仍缺失。下方为预算与假设情景，完整执行约定和大跌修复验证见新回测页。</Notice><section className="model-section"><h2>真实历史检验</h2><p>2011-10-10—2026-09-30，3,641个交易日。核对次日成交、资金守恒和策略表现，并比较不同触发指数与入场起点。</p><Link className="button-link" to="/models/hs300/crisis-validation">打开大跌买入与修复获利验证</Link><p><Link to="/models/hs300/backtest">早期预算核心对照</Link></p></section><div className="model-layout"><aside className="parameter-panel"><h2>预算参数</h2><div className="fields"><NumberField label="总本金 / RMB" value={params.capital} onChange={v => update('capital', v)} min={1} max={1e9} step={1000} /><NumberField label="幂指数 γ" value={params.gamma} onChange={v => update('gamma', v)} min={0.1} max={5} step={0.1} hint="基准1.6；γ>1使浅跌预算更少" /><NumberField label="最大回撤 / %" value={params.maxDrawdown} onChange={v => update('maxDrawdown', v)} min={1} max={99} /><NumberField label="每档步长 / %" value={params.step} onChange={v => update('step', v)} min={1} max={99} /><NumberField label="最大部署比例 / %" value={params.deployment} onChange={v => update('deployment', v)} min={0} max={100} hint="原文10万元、8档合计100%；可研究保留现金" /></div><Button icon={<ArrowCounterclockwise24Regular />} onClick={reset}>恢复基准参数</Button><p className="meta" style={{ marginTop: 16 }}>计算只在浏览器内运行，不连接交易接口。</p></aside><div className="model-result"><div className="formula-panel"><span className="eyebrow">POWER-LAW CUMULATIVE BUDGET</span><code>C(d) = Cmax × (d / dmax)<sup>γ</sup></code><p>用浅跌时少赚，交换深跌时仍然有现金。</p><p className="meta">Cmax = 总本金 × 最大部署比例；d超过dmax时预算封顶。幂律累计仓位不是几何级数加仓。</p></div>{error ? <div className="validation-error" role="alert">{error}</div> : <><div className="result-kpis"><div><span>档位数量</span><strong>{rows.length}档</strong></div><div><span>最大累计部署</span><strong>¥{num(rows.at(-1)!.cumulative)}</strong></div><div><span>首档投入</span><strong>¥{num(rows[0].increment)}</strong></div></div><Chart title="预算随回撤如何变化" question="同一终端预算下，三种分配方式在浅跌保留多少现金？" option={option} fallback={`幂律γ=${params.gamma}。${rows.map(r => `回撤${r.drawdown}%时累计预算${num(r.cumulative)}元、剩余现金${num(r.cash)}元`).join('；')}。等额对照每档相等，几何对照使用示例比率1.3。`} height={310} /><section className="model-section"><h2>仓位阶梯</h2><p className="meta">上证指数作为触发参考；沪深300 / ETF作为研究标的。触发参考跌幅不等于ETF实际跌幅。</p><div className="model-actions"><ExportButton onClick={() => downloadCsv('hs300-budget-model-output.csv', [['Source', '用户输入与幂律公式 · Model output'], ['Updated', '2026-10-07'], ['Capital_RMB', params.capital], ['Gamma', params.gamma], ['Max_drawdown_percent', params.maxDrawdown], ['Step_percent', params.step], ['Deployment_percent', params.deployment], ['档位', '参考回撤%', '累计预算RMB', '本档预算RMB', '剩余现金RMB'], ...rows.map(r => [r.level, r.drawdown, r.cumulative.toFixed(2), r.increment.toFixed(2), r.cash.toFixed(2)])])} /></div><div className="table-scroll" role="region" aria-label="仓位阶梯，可横向滚动" tabIndex={0}><table><thead><tr><th>档位</th><th>参考回撤</th><th>累计预算 / 元</th><th>本档预算 / 元</th><th>现金 / 元</th></tr></thead><tbody>{rows.map(r => <tr key={r.level}><td>{r.level}</td><td>−{r.drawdown}%</td><td>{num(r.cumulative)}</td><td>{num(r.increment)}</td><td>{num(r.cash)}</td></tr>)}</tbody></table></div><p className="meta">来源：任务公式与当前输入 · Model output · 2026-10-07。非整除步长时，最后一档封顶在最大回撤。</p></section></>}</div></div><section className="model-section"><h2>Scenario A / B / C</h2><Evidence level="Scenario" /><p style={{ margin: '12px 0' }}>以下是可调教学情景；原文A/B/C及正确成本重算见危机验证页。以ETF归一化价格100为起点，只有参考回撤跨过的档位才计入预算。假定现金不计息，不含费用、税费、分红与重复加仓。</p><div className="scenario-cards">{scenarioResults.map(({ scenario: s, results, error }, i) => <div className="scenario-card" key={s.id}><h3>{s.id} · {s.name}</h3><div className="fields"><NumberField label="最深参考回撤 / %" value={s.drawdown} onChange={v => updateScenario(i, 'drawdown', v)} min={0} max={99} /><NumberField label="ETF终值价格 / 归一化" value={s.terminal} onChange={v => updateScenario(i, 'terminal', v)} min={1} /><NumberField label="ETF回撤 / 参考回撤倍数" value={s.sensitivity} onChange={v => updateScenario(i, 'sensitivity', v)} min={0} max={2} step={0.1} hint="仅情景假设，不是实测相关性" /></div>{error ? <p className="validation-error" role="alert">{error}</p> : <><strong>¥{num(results[0].value)}</strong><p>幂律情景终值 · 现金¥{num(results[0].cash)}</p><div className="table-scroll"><table><thead><tr><th>分配</th><th>终值 / 元</th></tr></thead><tbody>{results.map(r => <tr key={r.id}><td>{r.title}</td><td>{num(r.value)}</td></tr>)}</tbody></table></div></>}</div>)}</div><p className="meta">买入价格 = 100 × (1 − 参考回撤 × ETF回撤倍数)。预算只封顶，不保证资产价格止跌；以上不执行门控与交易。</p></section><section className="model-section"><h2>参考锚点计算实验</h2><Evidence level="Scenario" /><div className="experiment-input" style={{ marginTop: 16 }}><div className="fields"><NumberField label="参考Anchor / 指数点位" value={anchor} onChange={setAnchor} min={1} hint="Example；非历史快照点位" /><NumberField label="参考当前点位" value={current} onChange={setCurrent} min={1} hint="Example；非实时数据" /></div>{referenceValid ? <p style={{ marginTop: 20 }}>参考回撤：<strong>{num(anchorDrawdown(anchor, current), 2)}%</strong> · 高于Anchor时归零；此输入不修改预算模型或触发买入。</p> : <p role="alert" className="validation-error">Anchor与当前点位须为正数。</p>}</div></section><section className="model-section"><h2>Time gate / Valuation gate与行动纪律</h2><Notice>以下已逐项核对原文；本预算计算器不执行门控，历史解释版及补充约定在危机验证页。</Notice><div className="guard-grid">{guardrails.map(([title, text]) => <div key={title}><h3>{title}</h3><p>{text}</p><span className="meta">来源：原HTML核对 · 历史执行缺口见验证页</span></div>)}</div></section><section className="model-section"><h2>风险与实施说明</h2><ul><li>本金可能在更深回撤之前已达到部署上限；保留生活缓冲应在模型之外单独安排。</li><li>指数参考、ETF净值、跟踪误差和实际成交存在差异；预算不代表成交能力。</li><li>原文的锚点、冷却和右侧状态已按公开补充约定回测；历史PB/ERP仍缺失，原策略不能视为完全验证。</li><li>等额与几何方案仅比较预算分配；几何增量比率1.3是教学设定。</li><li>危机雷达与资金部署独立，研究阶段不会自动修改仓位。</li></ul><div className="module-links"><Link to="/resilience">个人韧性与现金缓冲</Link><Link to="/methodology">模型与现实的边界</Link></div></section><ModelDocumentation model={models[0]} /><Notice>Source：用户任务书与原HTML · 2026-10-07；模型身份：Snapshot · 2026-09-04，原快照点位已核对。<br />Research only. Not investment advice.</Notice></div>;
+}

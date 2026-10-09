@@ -1,0 +1,231 @@
+{
+  "executed_at_utc": "2026-10-09T04:59:01.945635+00:00",
+  "suites": [
+    {
+      "name": "original_crisis",
+      "status": "PASS",
+      "count": 48,
+      "fail": 0,
+      "skipped": 0,
+      "log": "checks/original_crisis.log",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts",
+        "-p",
+        "test_crisis*.py",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "original_freeze",
+      "status": "PASS",
+      "count": 22,
+      "fail": 0,
+      "skipped": 0,
+      "log": "checks/original_freeze.log",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts",
+        "-p",
+        "test_freeze_v31.py",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "original_typescript",
+      "status": "PASS",
+      "count": 13,
+      "fail": 0,
+      "skipped": 0,
+      "log": "checks/original_typescript.log",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "original_qualification",
+      "status": "PASS",
+      "count": 29,
+      "fail": 0,
+      "skipped": 0,
+      "log": "checks/original_qualification.log",
+      "command": [
+        "node",
+        "--test",
+        "tests/implementation.test.mjs"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "cny_implementability",
+      "status": "PASS",
+      "count": 45,
+      "fail": 0,
+      "skipped": 0,
+      "log": "checks/cny_implementability.log",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts",
+        "-p",
+        "test_cny_implementability.py",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "cny_evidence_round2",
+      "status": "PASS",
+      "count": 32,
+      "fail": 0,
+      "skipped": 0,
+      "log": "checks/cny_evidence_round2.log",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts",
+        "-p",
+        "test_cny_evidence_round2.py",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "cny_qualification_round3",
+      "status": "PASS",
+      "count": 27,
+      "fail": 0,
+      "skipped": 0,
+      "log": "checks/cny_qualification_round3.log",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts",
+        "-p",
+        "test_cny_round3.py",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "task_a_original_round4",
+      "status": "PASS",
+      "count": 16,
+      "fail": 0,
+      "skipped": 0,
+      "log": "checks/task_a_original_round4.log",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/workspace/sites/economic-crisis/research/work-audit-20261009/originals/task-a/extracted",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "task_a_revised",
+      "status": "PASS",
+      "count": 22,
+      "fail": 0,
+      "skipped": 0,
+      "log": "checks/task_a_revised.log",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/workspace/sites/economic-crisis/research/work-audit-20261009/task-a",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "task_b_new_reference",
+      "status": "PASS",
+      "count": 18,
+      "fail": 0,
+      "skipped": 0,
+      "log": "checks/task_b_new_reference.log",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/workspace/sites/economic-crisis/research/work-audit-20261009/task-b",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "three_task_integration",
+      "status": "PASS",
+      "count": 7,
+      "fail": 0,
+      "skipped": 0,
+      "log": "checks/three_task_integration.log",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/workspace/sites/economic-crisis/research/work-audit-20261009",
+        "-p",
+        "test_integration.py",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "production_build",
+      "status": "PASS",
+      "count": 0,
+      "fail": 0,
+      "skipped": 0,
+      "log": "checks/production_build.log",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "passed": 279,
+  "failed": 0,
+  "skipped": 0,
+  "not_executed": [
+    "Original B source tests: source missing",
+    "Original C acceptance/source tests: source missing",
+    "Verified full historical 159307 replay: input data missing",
+    "Formal after-tax replay: evidence incomplete",
+    "96 old stress engine runs: unchanged archive retained, not rerun"
+  ],
+  "build": "PASS"
+}

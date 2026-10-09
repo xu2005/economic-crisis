@@ -1,0 +1,18 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+*.log
+*.tmp
+.cache/
+reports/**/raw/
+data/v32-cny/official/
+data/v32-cny/evidence-round2/attempts/**/*.raw
+reports/crisis-v3/input/
+*.sqlite
+*.db
+
+# Raw market history is intentionally excluded from the public GitHub snapshot.
+/src/data/hs300-history.json
+/src/data/hs300-crisis.json
