@@ -1,0 +1,69 @@
+{
+  "task_id": "economic-crisis-v16.1-realdata-20261012",
+  "timezone": "Asia/Shanghai",
+  "first_run": "2026-10-12T01:08:00+08:00",
+  "resume_check": "2026-10-12T06:10:00+08:00",
+  "execution_environment": "ChatGPT automation GitHub connector; NOT Windows Codex Desktop; container execution unavailable",
+  "initial_main_head": "15347af549a8e157f8b39e4999a6bf0a1f8855dc",
+  "branch": "research/v16-1-tdx-20261012-0108",
+  "stage": "PARTIAL_PRICE_ONLY_BACKTEST_AND_BRANCH_DELIVERY",
+  "completed": [
+    "read_existing_plan",
+    "inspect_live_repo_metadata",
+    "validate_four_normalized_tdx_csv",
+    "compute_price_only_metrics",
+    "compute_illustrative_domestic_60_40",
+    "inspect_public_data_source_pages_once",
+    "prepare_public_report_and_page_source"
+  ],
+  "pending": [
+    "verify_github_branch_commit_and_PR",
+    "run_python_reproducer_in_authorized_Windows_environment",
+    "obtain_licensed_complete_history_without_retrying_failed_resources",
+    "official_dividend_and_PIT_TTM_evidence",
+    "verify_web_deployment_if_authorized"
+  ],
+  "attempted_sources": {
+    "windows_tdx_local": {
+      "attempts": 0,
+      "status": "SKIPPED_NO_WINDOWS_ACCESS",
+      "retry_on_resume": false
+    },
+    "tdx_official_vipdata_page": {
+      "attempts": 1,
+      "status": "HTML_ONLY_NO_DIRECT_DOWNLOAD_LINK",
+      "retry_on_resume": false
+    },
+    "csindex_930955_methodology": {
+      "attempts": 1,
+      "status": "METHODOLOGY_ONLY_NO_HISTORICAL_PIT_TTM",
+      "retry_on_resume": false
+    },
+    "chinabond_10y_history_page": {
+      "attempts": 1,
+      "status": "JS_FORM_NO_DATA_EXPORT_IN_TOOL",
+      "retry_on_resume": false
+    },
+    "etf_official_dividend_pdfs": {
+      "attempts": 0,
+      "status": "NOT_RETRIEVED",
+      "retry_on_resume": false
+    },
+    "secondary_159307_dividend_table": {
+      "attempts": 1,
+      "status": "SECONDARY_CANDIDATE_NOT_OFFICIAL",
+      "retry_on_resume": false
+    }
+  },
+  "evidence_blocks": [
+    "FORMAL BACKTEST BLOCKED",
+    "IMPLEMENTATION BLOCKED"
+  ],
+  "git_head_before": "15347af549a8e157f8b39e4999a6bf0a1f8855dc",
+  "git_commit_after": "resolve via GitHub branch head; avoid self-referential hash",
+  "push_verified": false,
+  "deploy_verified": false,
+  "run_complete": false,
+  "last_error": "No access to Windows desktop/TDX, no container execution, no Sites deployment credentials",
+  "updated_at": "2026-10-12T01:08:00+08:00"
+}

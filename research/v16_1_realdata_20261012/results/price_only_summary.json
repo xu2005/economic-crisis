@@ -1,0 +1,52 @@
+{
+  "task_id": "economic-crisis-v16.1-realdata-20261012",
+  "generated_at": "2026-10-12T01:08:00+08:00",
+  "input": "user-supplied normalized TDX CSV, local price only; not exchange-certified",
+  "interval": {
+    "first": "2025-01-10",
+    "last": "2026-10-09",
+    "observations": 420,
+    "aligned": true
+  },
+  "price_only": {
+    "159307": {
+      "return_pct": 1.4822,
+      "max_drawdown_pct": -15.7941,
+      "annualized_vol_pct": 11.4594
+    },
+    "510300": {
+      "return_pct": 14.7005,
+      "max_drawdown_pct": -13.8676,
+      "annualized_vol_pct": 16.6785
+    },
+    "511010": {
+      "return_pct": -0.3343,
+      "max_drawdown_pct": -1.4217,
+      "annualized_vol_pct": 1.5953
+    },
+    "000300": {
+      "return_pct": 15.6671,
+      "max_drawdown_pct": -14.8109,
+      "annualized_vol_pct": 16.8183
+    }
+  },
+  "illustrative_domestic_60_40": {
+    "return_pct": 8.6866,
+    "max_drawdown_pct": -9.4071,
+    "annualized_vol_pct": 10.599,
+    "method": "60% 510300 + 40% 511010, one initial allocation, no rebalancing, no dividends, no fees, no slippage"
+  },
+  "quality": {
+    "duplicates": 0,
+    "ohlc_invalid": 0,
+    "volume_nonpositive": 0,
+    "independent_official_calendar_checked": false
+  },
+  "dividends": "EXCLUDED; candidate-only 159307 cash events not used for verified backtest",
+  "status": {
+    "strategy_159307": "FORMAL BACKTEST BLOCKED",
+    "portfolio_v3x": "IMPLEMENTATION BLOCKED",
+    "site_deployment": "NOT_ATTEMPTED_NO_SITE_ACCESS",
+    "formal_v161_release": "NOT_CLAIMED"
+  }
+}

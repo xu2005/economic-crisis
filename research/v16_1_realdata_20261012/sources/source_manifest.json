@@ -1,0 +1,36 @@
+{
+  "evidence_grade": "LOCAL_TDX_PRICE",
+  "rows_per_symbol": 420,
+  "normalized_input_files": [
+    "tdx_510300_ohlcv.csv",
+    "tdx_511010_ohlcv.csv",
+    "tdx_000300_ohlcv.csv",
+    "tdx_159307_ohlcv.csv"
+  ],
+  "raw_txt_sha256_from_prior_audit_NOT_recomputed": {
+    "159307": "2c4bd10f27b648989fc07c0b57287a498adb6c2a9f774e7604a89ef65b4ba132",
+    "510300": "116e940209fdcbb04321a2a69bde76205dc16b8b7d229ea5ed8514f402e86fae",
+    "511010": "bd2af7cb14b893a71794db330eb6f5556b07da933c3bc9077b931ac83136dba2",
+    "000300": "57bbaa367af139557315b80063f20344fa334efa26e6a7883de118f5b73bd5f7"
+  },
+  "raw_series_public": false,
+  "source_urls": {
+    "tdx": "https://www.tdx.com.cn/article/vipdata.html",
+    "csindex_930955_methodology": "https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/indices/detail/files/zh_CN/20231208180204-930955_Index_Methodology_cn.pdf",
+    "chinabond_10y": "https://yield.chinabond.com.cn/cbweb-mn/pgxh/showHistory",
+    "secondary_159307_dividend": "https://fundf10.eastmoney.com/fhsp_159307.html"
+  },
+  "verified_claims": [
+    "4 CSV files parsed; 420 rows each; matching dates; no OHLC invalid rows or duplicate dates"
+  ],
+  "not_verified": [
+    "Official full history",
+    "official calendar",
+    "930955 historical point-in-time TTM",
+    "10-year yield usable timestamps",
+    "all ETF cash payments and reinvestment timestamps",
+    "transaction costs",
+    "NAV and market microstructure",
+    "web deployment"
+  ]
+}

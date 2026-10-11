@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>V16.1 通达信历史价格初审 · 经济危机研究室</title>
+<style>
+:root{color-scheme:light dark;font-family:system-ui,"Noto Sans SC",sans-serif}body{max-width:1060px;margin:auto;padding:36px 18px;line-height:1.7}header{padding:20px 0 25px;border-bottom:1px solid #999}h1{font-size:clamp(1.5rem,4vw,2.5rem);line-height:1.2}.warning{padding:18px;border-left:5px solid #c86c2a;background:color-mix(in srgb, #c86c2a 12%, transparent);margin:25px 0}table{width:100%;border-collapse:collapse;min-width:620px}th,td{padding:12px;border-bottom:1px solid #888;text-align:right}th:first-child,td:first-child{text-align:left}.scroll{overflow-x:auto}code{font-size:.9em}small{opacity:.8}a{color:inherit;text-decoration:underline}.tag{display:inline-block;border:1px solid #888;border-radius:999px;padding:4px 10px;margin:3px;font-size:.83rem}footer{margin-top:50px;padding-top:20px;border-top:1px solid #888}</style></head>
+<body><header><p>CRISIS OBSERVATORY / 经济危机研究室</p><h1>V16.1 · 通达信真实历史价格初步回测</h1><p>研究分支草稿 · 2026-10-12 · 2025-01-10 至 2026-10-09 · 每个标的420个交易日</p></header>
+<div class="warning" role="alert"><strong>不是正式策略回测。</strong> 仅统计用户提供的通达信收盘价格；不含分红、手续费、税费、滑点或成交保障。930955历史TTM股息率与当时可得时间缺失，159307利差策略维持 <code>FORMAL BACKTEST BLOCKED</code>；V3.x维持 <code>IMPLEMENTATION BLOCKED</code>。网页文件处于GitHub研究分支，<strong>不能据此声称线上Sites已部署</strong>。</div>
+<p><span class="tag">LOCAL_TDX_PRICE</span><span class="tag">PARTIAL HISTORY</span><span class="tag">PRICE ONLY</span><span class="tag">NO LIVE TRADING</span></p>
+<h2>样本价格层统计</h2><div class="scroll"><table><thead><tr><th>标的</th><th>价格累计收益</th><th>价格最大回撤</th><th>年化价格波动率</th></tr></thead><tbody>
+<tr><td>510300 沪深300ETF</td><td>+14.7005%</td><td>-13.8676%</td><td>16.6785%</td></tr>
+<tr><td>511010 国债ETF</td><td>-0.3343%</td><td>-1.4217%</td><td>1.5953%</td></tr>
+<tr><td>000300 沪深300指数（非交易标的）</td><td>+15.6671%</td><td>-14.8109%</td><td>16.8183%</td></tr>
+<tr><td>159307 红利低波100ETF</td><td>+1.4822%</td><td>-15.7941%</td><td>11.4594%</td></tr>
+<tr><td>示意境内60/40：首日建仓不再平衡</td><td>+8.6866%</td><td>-9.4071%</td><td>10.5990%</td></tr></tbody></table></div>
+<p><small>计算公式：累计=末日收盘/首日收盘-1；波动率=日简单收益样本标准差×√252；最大回撤=收盘归一化净值相对历史峰值的最大跌幅。60/40仅为510300/511010初始60%/40%的价格组合，不能替代V3.x冻结权重或强基准。</small></p>
+<h2>阻断与下一步</h2><p>缺少930955历史逐决策时点可用的TTM股息率、10年期国债收益率发布时间、基金原始分红及可用现金时点、完整上市以来ETF交易价格/NAV和真实费用。指数编制方法使用三年会计年度分红筛选，不能把该筛选公式冒充TTM历史信号。待取得证据后才能计算真实利差触发交易。</p>
+<p>公开仓库遵守 <code>raw_series_public=false</code>，不分发原始OHLC或可还原的逐日权益序列。<a href="https://github.com/xu2005/economic-crisis/tree/research/v16-1-tdx-20261012-0108">查看GitHub研究分支与复现脚本</a>。</p>
+<footer><small>2026-10-12 · 研究性数据审计，非投资建议。该页面仅为待集成的静态研究草稿，不代表现有线上正式版本已变更。</small></footer></body></html>
