@@ -22,5 +22,25 @@
     "formal_backtest": "BLOCKED",
     "implementation": "BLOCKED",
     "v161_acceptance": false
+  },
+  "deployment": {
+    "verified_at": "2026-10-12T10:43:04.986262+08:00",
+    "research_site_project_id": "appgprj_6acbc95500608191b2a3f12b8df999e9",
+    "site_version": 1,
+    "site_version_id": "appgprj_6acbc95500608191b2a3f12b8df999e9~appgver_d490b1f0e8388191b2089eda78688e84",
+    "site_source_commit": "0cdc29dba5490c86fa0753014a9ac22308075e31",
+    "deployment_id": "appgdep_6acc48496ef08191877e84ae1684d2ba",
+    "deployment_status": "succeeded",
+    "url": "https://economic-crisis-v161-research-20261012.xuhengyi.chatgpt.site",
+    "audience": "owner_private",
+    "original_site_project_id": "appgprj_6ac60c17d7a08191b1b046e1a152417e",
+    "original_site_version_unchanged": 18,
+    "github_research_commit": "9de3767c4f209600b15827e1182336c35693db7d",
+    "github_main_unchanged": "15347af549a8e157f8b39e4999a6bf0a1f8855dc",
+    "online_browser_acceptance": "LOGIN_REQUIRED_NOT_VERIFIED",
+    "local_browser_acceptance": "PASS: chart switches, mobile 390x844, no script errors, one real CSV download event",
+    "formal_backtest": "BLOCKED",
+    "implementation": "BLOCKED",
+    "v161_formal_acceptance": false
   }
 }

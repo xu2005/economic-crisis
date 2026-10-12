@@ -43,3 +43,7 @@ FORMAL BACKTEST BLOCKED / IMPLEMENTATION BLOCKED；V16.1未验收。
 GitHub origin经实查为https://github.com/xu2005/economic-crisis.git，基线15347af549a8e157f8b39e4999a6bf0a1f8855dc，研究分支research/v16-1-realdata-20261012。实际提交、远端SHA及网页部署另由checkpoint与HANDOFF_0610.md记录；此报告不提前声称push或部署成功。
 
 稳定Sites实查为版本18。禁止部署旧本机项目或从研究GitHub分支覆盖稳定站。仅使用独立新Site身份发布本次派生研究页；失败时DEPLOY_BLOCKED。完整数据、合格TTM/PIT、官方全分红、可成交性、NAV/IOPV、真实成本与个人到账证据缺口均未解除。
+
+## 实际发布与自动化结果补记
+
+两次Windows一次性任务均实际触发，但01:37与06:10均遇模型额度限制，未自动完成发布。用户随后明确继续，沿用断点完成研究分支推送与独立私有Site第1版发布。原稳定Site第18版和GitHub main未改。真实发布地址与SHA见PUBLISH_RECORD.json；线上浏览器因需登录未完成交互验收，本地UI检查已通过。V16.1正式验收仍为未通过。
