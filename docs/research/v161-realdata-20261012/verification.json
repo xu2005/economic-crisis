@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-10-12T10:30:23.338257+08:00",
+  "software_tests": {
+    "passed": 14,
+    "failed": 0,
+    "scope": "price/assumption ledger fixed vectors; not formal strategy acceptance"
+  },
+  "download_once_guard": "PASS",
+  "independent_binary_price_recompute": "PASS",
+  "local_browser": {
+    "page_content": "PASS",
+    "series_and_view_switch": "PASS",
+    "javascript_errors": 0,
+    "mobile_390x844": "PASS_NO_PAGE_OVERFLOW_TABLE_SCROLLS",
+    "price_metrics_download_event": "PASS"
+  },
+  "original_site": {
+    "project_id": "appgprj_6ac60c17d7a08191b1b046e1a152417e",
+    "version_unchanged": 18
+  },
+  "qualification": {
+    "formal_backtest": "BLOCKED",
+    "implementation": "BLOCKED",
+    "v161_acceptance": false
+  }
+}

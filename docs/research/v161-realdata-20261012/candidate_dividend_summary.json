@@ -1,0 +1,66 @@
+[
+  {
+    "code": "510300",
+    "evidence": "ASSUMPTION_SCENARIO_SECONDARY_DIVIDENDS",
+    "start": "2015-09-02",
+    "end": "2026-03-06",
+    "budget": 100000,
+    "fee_bps": 5,
+    "slippage_bps": 5,
+    "lot": 100,
+    "cash_timing": "ASSUME_PAYMENT_DAY_END_CREDIT_NEXT_OBSERVED_OPEN",
+    "return_on_initial_cash": 0.7194772191330001,
+    "fees": 62.604686699999995,
+    "trades": 12,
+    "credited_events": 11,
+    "skipped_record_dates": [
+      "2012-12-18",
+      "2014-01-21",
+      "2015-01-20"
+    ],
+    "actual_credit_verified": false
+  },
+  {
+    "code": "511010",
+    "evidence": "ASSUMPTION_SCENARIO_SECONDARY_DIVIDENDS",
+    "start": "2015-09-02",
+    "end": "2026-03-06",
+    "budget": 100000,
+    "fee_bps": 5,
+    "slippage_bps": 5,
+    "lot": 100,
+    "cash_timing": "ASSUME_PAYMENT_DAY_END_CREDIT_NEXT_OBSERVED_OPEN",
+    "return_on_initial_cash": 0.31320965452500027,
+    "fees": 49.119547499999996,
+    "trades": 1,
+    "credited_events": 3,
+    "skipped_record_dates": [
+      "2013-06-03",
+      "2026-03-25",
+      "2026-06-25",
+      "2026-09-18"
+    ],
+    "actual_credit_verified": false
+  },
+  {
+    "code": "159307",
+    "evidence": "ASSUMPTION_SCENARIO_SECONDARY_DIVIDENDS",
+    "start": "2024-04-25",
+    "end": "2026-03-06",
+    "budget": 100000,
+    "fee_bps": 5,
+    "slippage_bps": 5,
+    "lot": 100,
+    "cash_timing": "ASSUME_PAYMENT_DAY_END_CREDIT_NEXT_OBSERVED_OPEN",
+    "return_on_initial_cash": 0.19381526853450004,
+    "fees": 53.92004655,
+    "trades": 7,
+    "credited_events": 6,
+    "skipped_record_dates": [
+      "2026-03-13",
+      "2026-06-12",
+      "2026-09-14"
+    ],
+    "actual_credit_verified": false
+  }
+]

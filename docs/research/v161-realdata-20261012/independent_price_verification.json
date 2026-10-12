@@ -1,0 +1,40 @@
+{
+  "checked_at": "2026-10-12T10:24:19.588712+08:00",
+  "status": "PASS",
+  "checks": [
+    {
+      "code": "510300",
+      "status": "PASS",
+      "rows": 2549,
+      "scope": "binary-to-CSV readback; scale-independent return/drawdown"
+    },
+    {
+      "code": "511010",
+      "status": "PASS",
+      "rows": 2549,
+      "scope": "binary-to-CSV readback; scale-independent return/drawdown"
+    },
+    {
+      "code": "159307",
+      "status": "PASS",
+      "rows": 450,
+      "scope": "binary-to-CSV readback; scale-independent return/drawdown"
+    },
+    {
+      "code": "000300",
+      "status": "PASS",
+      "rows": 2549,
+      "scope": "binary-to-CSV readback; scale-independent return/drawdown"
+    }
+  ],
+  "additional_checks": [
+    "known drawdown path",
+    "missing signal rejected",
+    "insufficient cash avoids fractional lot",
+    "fees preserve nonnegative cash"
+  ],
+  "limits": [
+    "Does not verify source authenticity, calendar completeness, price divisor or adjustment convention",
+    "Does not verify dividends, historical PIT signals, trading execution, formal strategy or V16.1 acceptance"
+  ]
+}

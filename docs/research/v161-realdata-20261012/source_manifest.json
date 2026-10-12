@@ -1,0 +1,401 @@
+{
+  "generated_at": "2026-10-12T01:36:55.038554+08:00",
+  "attempts": [
+    {
+      "key": "etf_159307_listing_original",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-08-30/1221053014.PDF",
+      "attempt_count": 1,
+      "status": "DOWNLOADED_UNVALIDATED",
+      "started_at": "2026-10-12T01:31:21.586772+08:00",
+      "finished_at": "2026-10-12T01:31:22.578280+08:00",
+      "sha256": "03804af7673a7f909ac168b64a558912114b13499a8c6c99ce9b5fbd08228bc2",
+      "size_bytes": 1568581
+    },
+    {
+      "key": "etf_510300_dividend_history",
+      "url": "https://fundf10.eastmoney.com/fhsp_510300.html",
+      "attempt_count": 1,
+      "status": "DOWNLOADED_UNVALIDATED",
+      "started_at": "2026-10-12T01:31:20.761545+08:00",
+      "finished_at": "2026-10-12T01:31:21.073093+08:00",
+      "sha256": "307d31ba38e11409079e2eaec2af0592719af19c6f695d9e52a6603789ba0e4c",
+      "size_bytes": 45714
+    },
+    {
+      "key": "tdx_gui_preflight",
+      "attempt_count": 1,
+      "status": "BLOCKED_USER_LIBRARY_WRITE",
+      "started_at": "2026-10-12T01:30:17.018424+08:00",
+      "finished_at": "2026-10-12T01:30:40.112586+08:00"
+    },
+    {
+      "key": "tdx_official_package_catalog",
+      "url": "https://www.tdx.com.cn/article/vipdata.html",
+      "attempt_count": 1,
+      "status": "DOWNLOADED_UNVALIDATED",
+      "started_at": "2026-10-12T01:29:10.481420+08:00",
+      "finished_at": "2026-10-12T01:29:10.861093+08:00",
+      "sha256": "92b455e0e5eb03637eb55c98514a3f392e071bb1bab1d7b639d9ca9919de0c61",
+      "size_bytes": 25376
+    },
+    {
+      "key": "china_10y_history",
+      "url": "https://yield.chinabond.com.cn/cbweb-mn/pgxh/showHistory",
+      "attempt_count": 1,
+      "status": "DOWNLOADED_UNVALIDATED",
+      "started_at": "2026-10-12T01:30:20.528445+08:00",
+      "finished_at": "2026-10-12T01:30:20.901444+08:00",
+      "sha256": "f9b0f8f085897fe05e00f5034c57d83c5b7a53b3e30bf655a01ce06d33c90d78",
+      "size_bytes": 12586
+    },
+    {
+      "key": "etf_511010_dividend_history",
+      "url": "https://fundf10.eastmoney.com/fhsp_511010.html",
+      "attempt_count": 1,
+      "status": "DOWNLOADED_UNVALIDATED",
+      "started_at": "2026-10-12T01:31:20.774091+08:00",
+      "finished_at": "2026-10-12T01:31:21.129492+08:00",
+      "sha256": "a01f2e011091aa599997ef8da160587853b39d1982fe57cde2f9f2dad8f2889b",
+      "size_bytes": 38085
+    },
+    {
+      "key": "tdx_full_daily_bundle",
+      "url": "https://data.tdx.com.cn/vipdoc/hsjday.zip",
+      "attempt_count": 1,
+      "status": "SKIPPED",
+      "started_at": "2026-10-12T01:30:40.223538+08:00",
+      "finished_at": "2026-10-12T01:33:40.264522+08:00",
+      "error": "TimeoutError: Total download time limit exceeded"
+    },
+    {
+      "key": "930955_historical_ttm",
+      "url": "https://oss-ch.csindex.com.cn/static/html/csindex/public/uploads/file/autofile/indicator/930955indicator.xls",
+      "attempt_count": 1,
+      "status": "DOWNLOADED_UNVALIDATED",
+      "started_at": "2026-10-12T01:31:34.485789+08:00",
+      "finished_at": "2026-10-12T01:31:34.691813+08:00",
+      "sha256": "ce382ecb09cfddf0d48c19692f97e392bdb33680809b9b676ea0b48da994c5b6",
+      "size_bytes": 8192
+    },
+    {
+      "key": "etf_159307_dividend_history",
+      "url": "https://fundf10.eastmoney.com/fhsp_159307.html",
+      "attempt_count": 1,
+      "status": "DOWNLOADED_UNVALIDATED",
+      "started_at": "2026-10-12T01:31:20.796890+08:00",
+      "finished_at": "2026-10-12T01:31:21.160687+08:00",
+      "sha256": "1c3f94f26687402be5548ca414a4651f82d3c2b2c9c2d87ce3f7a7e0affa6328",
+      "size_bytes": 45070
+    }
+  ],
+  "cached": [
+    {
+      "key": "510300-2025-06_original",
+      "url": "https://www.sse.com.cn/disclosure/fund/announcement/c/new/2025-06-11/510300_20250611_ZAU4.pdf",
+      "sha256": "9a2f554b8ba5e340c79905171388f65225e9239027a36794522aa6bb4a82be67",
+      "file": "raw/cached_official/510300-2025-06_original.bin",
+      "status": "CACHED_BYTES_REVERIFIED",
+      "evidence": "VERIFIED_DATA_FIELDS_ONLY",
+      "pit_verified": false
+    },
+    {
+      "key": "511010-2025-09_original",
+      "url": "https://www.sse.com.cn/disclosure/fund/announcement/c/new/2025-09-18/511010_20250918_FU3S.pdf",
+      "sha256": "ddfaac7c7097b0a15666d6e6787553be48613468e221564bccabfceceb5d0d02",
+      "file": "raw/cached_official/511010-2025-09_original.bin",
+      "status": "CACHED_BYTES_REVERIFIED",
+      "evidence": "VERIFIED_DATA_FIELDS_ONLY",
+      "pit_verified": false
+    },
+    {
+      "key": "511010-2025-12_original",
+      "url": "https://www.sse.com.cn/disclosure/fund/announcement/c/new/2025-12-23/511010_20251223_0M89.pdf",
+      "sha256": "733995693eef19c61a55a30d2be7dcc0dcc471980b81b85363977478195c50a8",
+      "file": "raw/cached_official/511010-2025-12_original.bin",
+      "status": "CACHED_BYTES_REVERIFIED",
+      "evidence": "VERIFIED_DATA_FIELDS_ONLY",
+      "pit_verified": false
+    },
+    {
+      "key": "bosera_dividend_original_20241213",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-12-13/1222004446.PDF",
+      "sha256": "b3cd38d8469fa8dff43c54b146f302da6fc0b640057d727d2d641e504d506071",
+      "file": "raw/cached_official/bosera_dividend_original_20241213.bin",
+      "status": "CACHED_BYTES_REVERIFIED",
+      "evidence": "VERIFIED_DATA_FIELDS_ONLY",
+      "pit_verified": false
+    },
+    {
+      "key": "bosera_dividend_original_20250617",
+      "url": "https://static.cninfo.com.cn/finalpage/2025-06-17/1223886501.PDF",
+      "sha256": "f59a9c88654c44284d14a78a235f2267a8c7c3ca023fafb728305de78cc660ec",
+      "file": "raw/cached_official/bosera_dividend_original_20250617.bin",
+      "status": "CACHED_BYTES_REVERIFIED",
+      "evidence": "VERIFIED_DATA_FIELDS_ONLY",
+      "pit_verified": false
+    },
+    {
+      "key": "bosera_dividend_original_20251210",
+      "url": "https://static.cninfo.com.cn/finalpage/2025-12-10/1224860349.PDF",
+      "sha256": "d5df1d55d92c7aa0b0e890bbdcb032add9fd7089dde664bbbbae3d9adcc9c66b",
+      "file": "raw/cached_official/bosera_dividend_original_20251210.bin",
+      "status": "CACHED_BYTES_REVERIFIED",
+      "evidence": "VERIFIED_DATA_FIELDS_ONLY",
+      "pit_verified": false
+    },
+    {
+      "key": "bosera_dividend_original_20260310",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-03-10/1225000727.PDF",
+      "sha256": "d2c5e72cdb53bffbc8e217942323bf66cf68498fec3a6263deb781f2c72b6c5a",
+      "file": "raw/cached_official/bosera_dividend_original_20260310.bin",
+      "status": "CACHED_BYTES_REVERIFIED",
+      "evidence": "VERIFIED_DATA_FIELDS_ONLY",
+      "pit_verified": false
+    },
+    {
+      "key": "mof_history_2024",
+      "url": "https://yield.chinabond.com.cn/cbweb-mn/pgxh/historyQuery",
+      "sha256": "de0384f14ab0e0326fec24d1d8397c6f0cb903a055533196ba9dedb7e7378f76",
+      "file": "raw/cached_official/mof_history_2024.bin",
+      "status": "CACHED_BYTES_REVERIFIED",
+      "evidence": "VERIFIED_DATA_FIELDS_ONLY",
+      "pit_verified": false
+    },
+    {
+      "key": "mof_history_2025",
+      "url": "https://yield.chinabond.com.cn/cbweb-mn/pgxh/historyQuery",
+      "sha256": "52860a2b0438eb22dc25ccb53ecbf5a80e8b0720b561c29665a1b050c91d61c5",
+      "file": "raw/cached_official/mof_history_2025.bin",
+      "status": "CACHED_BYTES_REVERIFIED",
+      "evidence": "VERIFIED_DATA_FIELDS_ONLY",
+      "pit_verified": false
+    },
+    {
+      "key": "mof_history_2026",
+      "url": "https://yield.chinabond.com.cn/cbweb-mn/pgxh/historyQuery",
+      "sha256": "acaf2283d9991f955d7748ff1279d72303cf1ef73fcd34ff4cda80489fc61f36",
+      "file": "raw/cached_official/mof_history_2026.bin",
+      "status": "CACHED_BYTES_REVERIFIED",
+      "evidence": "VERIFIED_DATA_FIELDS_ONLY",
+      "pit_verified": false
+    }
+  ],
+  "qualification": {
+    "cached_sources": [
+      {
+        "key": "510300-2025-06_original",
+        "url": "https://www.sse.com.cn/disclosure/fund/announcement/c/new/2025-06-11/510300_20250611_ZAU4.pdf",
+        "sha256": "9a2f554b8ba5e340c79905171388f65225e9239027a36794522aa6bb4a82be67",
+        "file": "raw/cached_official/510300-2025-06_original.bin",
+        "status": "CACHED_BYTES_REVERIFIED",
+        "evidence": "VERIFIED_DATA_FIELDS_ONLY",
+        "pit_verified": false
+      },
+      {
+        "key": "511010-2025-09_original",
+        "url": "https://www.sse.com.cn/disclosure/fund/announcement/c/new/2025-09-18/511010_20250918_FU3S.pdf",
+        "sha256": "ddfaac7c7097b0a15666d6e6787553be48613468e221564bccabfceceb5d0d02",
+        "file": "raw/cached_official/511010-2025-09_original.bin",
+        "status": "CACHED_BYTES_REVERIFIED",
+        "evidence": "VERIFIED_DATA_FIELDS_ONLY",
+        "pit_verified": false
+      },
+      {
+        "key": "511010-2025-12_original",
+        "url": "https://www.sse.com.cn/disclosure/fund/announcement/c/new/2025-12-23/511010_20251223_0M89.pdf",
+        "sha256": "733995693eef19c61a55a30d2be7dcc0dcc471980b81b85363977478195c50a8",
+        "file": "raw/cached_official/511010-2025-12_original.bin",
+        "status": "CACHED_BYTES_REVERIFIED",
+        "evidence": "VERIFIED_DATA_FIELDS_ONLY",
+        "pit_verified": false
+      },
+      {
+        "key": "bosera_dividend_original_20241213",
+        "url": "https://static.cninfo.com.cn/finalpage/2024-12-13/1222004446.PDF",
+        "sha256": "b3cd38d8469fa8dff43c54b146f302da6fc0b640057d727d2d641e504d506071",
+        "file": "raw/cached_official/bosera_dividend_original_20241213.bin",
+        "status": "CACHED_BYTES_REVERIFIED",
+        "evidence": "VERIFIED_DATA_FIELDS_ONLY",
+        "pit_verified": false
+      },
+      {
+        "key": "bosera_dividend_original_20250617",
+        "url": "https://static.cninfo.com.cn/finalpage/2025-06-17/1223886501.PDF",
+        "sha256": "f59a9c88654c44284d14a78a235f2267a8c7c3ca023fafb728305de78cc660ec",
+        "file": "raw/cached_official/bosera_dividend_original_20250617.bin",
+        "status": "CACHED_BYTES_REVERIFIED",
+        "evidence": "VERIFIED_DATA_FIELDS_ONLY",
+        "pit_verified": false
+      },
+      {
+        "key": "bosera_dividend_original_20251210",
+        "url": "https://static.cninfo.com.cn/finalpage/2025-12-10/1224860349.PDF",
+        "sha256": "d5df1d55d92c7aa0b0e890bbdcb032add9fd7089dde664bbbbae3d9adcc9c66b",
+        "file": "raw/cached_official/bosera_dividend_original_20251210.bin",
+        "status": "CACHED_BYTES_REVERIFIED",
+        "evidence": "VERIFIED_DATA_FIELDS_ONLY",
+        "pit_verified": false
+      },
+      {
+        "key": "bosera_dividend_original_20260310",
+        "url": "https://static.cninfo.com.cn/finalpage/2026-03-10/1225000727.PDF",
+        "sha256": "d2c5e72cdb53bffbc8e217942323bf66cf68498fec3a6263deb781f2c72b6c5a",
+        "file": "raw/cached_official/bosera_dividend_original_20260310.bin",
+        "status": "CACHED_BYTES_REVERIFIED",
+        "evidence": "VERIFIED_DATA_FIELDS_ONLY",
+        "pit_verified": false
+      },
+      {
+        "key": "mof_history_2024",
+        "url": "https://yield.chinabond.com.cn/cbweb-mn/pgxh/historyQuery",
+        "sha256": "de0384f14ab0e0326fec24d1d8397c6f0cb903a055533196ba9dedb7e7378f76",
+        "file": "raw/cached_official/mof_history_2024.bin",
+        "status": "CACHED_BYTES_REVERIFIED",
+        "evidence": "VERIFIED_DATA_FIELDS_ONLY",
+        "pit_verified": false
+      },
+      {
+        "key": "mof_history_2025",
+        "url": "https://yield.chinabond.com.cn/cbweb-mn/pgxh/historyQuery",
+        "sha256": "52860a2b0438eb22dc25ccb53ecbf5a80e8b0720b561c29665a1b050c91d61c5",
+        "file": "raw/cached_official/mof_history_2025.bin",
+        "status": "CACHED_BYTES_REVERIFIED",
+        "evidence": "VERIFIED_DATA_FIELDS_ONLY",
+        "pit_verified": false
+      },
+      {
+        "key": "mof_history_2026",
+        "url": "https://yield.chinabond.com.cn/cbweb-mn/pgxh/historyQuery",
+        "sha256": "acaf2283d9991f955d7748ff1279d72303cf1ef73fcd34ff4cda80489fc61f36",
+        "file": "raw/cached_official/mof_history_2026.bin",
+        "status": "CACHED_BYTES_REVERIFIED",
+        "evidence": "VERIFIED_DATA_FIELDS_ONLY",
+        "pit_verified": false
+      }
+    ],
+    "cgb10y": {
+      "rows": 615,
+      "start": "2024-04-16",
+      "end": "2026-10-08",
+      "new_attempt": "HTML_QUERY_FORM_NO_SERIES",
+      "pit_verified": false
+    },
+    "csi930955": {
+      "rows": 20,
+      "start": "2026-09-14",
+      "end": "2026-10-09",
+      "qualified_signal_rows": 0,
+      "ttm_verified": false,
+      "pit_verified": false,
+      "weekend_rows": 0,
+      "note": "Recent official D/P1/D/P2 values; not qualified daily historical TTM. Do not interpolate or use for strategy."
+    },
+    "dividends": {
+      "candidate_events": 30,
+      "cached_original_events": 7,
+      "complete_official_history": false,
+      "broker_cash_timing_verified": false
+    },
+    "listing": {
+      "code": "159307",
+      "listing_date": "2024-04-25",
+      "source": "https://static.cninfo.com.cn/finalpage/2024-08-30/1221053014.PDF",
+      "pdf_page": 5,
+      "sha256": "03804af7673a7f909ac168b64a558912114b13499a8c6c99ce9b5fbd08228bc2",
+      "evidence": "VERIFIED_DATA",
+      "interpretation": "Issuer interim report original on statutory disclosure host; not the original listing announcement"
+    }
+  },
+  "price_files": [
+    {
+      "code": "510300",
+      "market": "sh",
+      "raw_file": "raw/local_vipdoc/sh510300.day",
+      "sha256": "48fcb120104ecb5a8a00787965248404118f8ec9daa1bbf3df139a8aa710b1f0",
+      "start": "2015-09-02",
+      "end": "2026-03-06",
+      "rows": 2549,
+      "divisor": 1000,
+      "price_adjustment": "UNADJUSTED",
+      "ohlc_pass": true,
+      "unique_ordered_dates": true,
+      "weekdays_pass": true,
+      "future_dates": 0,
+      "large_moves": 0,
+      "calendar_gaps_over_4_days": 44,
+      "calendar_coverage": "UNKNOWN_NO_OFFICIAL_CALENDAR",
+      "history_status": "PARTIAL_HISTORY",
+      "evidence": "LOCAL_TDX_PRICE",
+      "volume_unit": "UNVERIFIED_RAW",
+      "redistribution": "LOCAL_ONLY"
+    },
+    {
+      "code": "511010",
+      "market": "sh",
+      "raw_file": "raw/local_vipdoc/sh511010.day",
+      "sha256": "178fd01ffa07cd5c03daf3ce9ac226caa7ab00ea298c209f09642d62f19bbd83",
+      "start": "2015-09-02",
+      "end": "2026-03-06",
+      "rows": 2549,
+      "divisor": 1000,
+      "price_adjustment": "UNADJUSTED",
+      "ohlc_pass": true,
+      "unique_ordered_dates": true,
+      "weekdays_pass": true,
+      "future_dates": 0,
+      "large_moves": 0,
+      "calendar_gaps_over_4_days": 44,
+      "calendar_coverage": "UNKNOWN_NO_OFFICIAL_CALENDAR",
+      "history_status": "PARTIAL_HISTORY",
+      "evidence": "LOCAL_TDX_PRICE",
+      "volume_unit": "UNVERIFIED_RAW",
+      "redistribution": "LOCAL_ONLY"
+    },
+    {
+      "code": "159307",
+      "market": "sz",
+      "raw_file": "raw/local_vipdoc/sz159307.day",
+      "sha256": "75e20c23f3eca55ec1162742eb46ce506e4c8bedfe2cdcc7169e78b35bd84622",
+      "start": "2024-04-25",
+      "end": "2026-03-06",
+      "rows": 450,
+      "divisor": 1000,
+      "price_adjustment": "UNADJUSTED",
+      "ohlc_pass": true,
+      "unique_ordered_dates": true,
+      "weekdays_pass": true,
+      "future_dates": 0,
+      "large_moves": 0,
+      "calendar_gaps_over_4_days": 8,
+      "calendar_coverage": "UNKNOWN_NO_OFFICIAL_CALENDAR",
+      "history_status": "PARTIAL_HISTORY",
+      "evidence": "LOCAL_TDX_PRICE",
+      "volume_unit": "UNVERIFIED_RAW",
+      "redistribution": "LOCAL_ONLY"
+    },
+    {
+      "code": "000300",
+      "market": "sh",
+      "raw_file": "raw/local_vipdoc/sh000300.day",
+      "sha256": "5a886c22d6974a4e381344344e20a2dc3bb60a9d39ba88318412071825f01b56",
+      "start": "2015-09-02",
+      "end": "2026-03-06",
+      "rows": 2549,
+      "divisor": 100,
+      "price_adjustment": "UNADJUSTED",
+      "ohlc_pass": true,
+      "unique_ordered_dates": true,
+      "weekdays_pass": true,
+      "future_dates": 0,
+      "large_moves": 0,
+      "calendar_gaps_over_4_days": 44,
+      "calendar_coverage": "UNKNOWN_NO_OFFICIAL_CALENDAR",
+      "history_status": "PARTIAL_HISTORY",
+      "evidence": "LOCAL_TDX_PRICE",
+      "volume_unit": "UNVERIFIED_RAW",
+      "redistribution": "LOCAL_ONLY"
+    }
+  ],
+  "raw_series_public": false,
+  "raw_files_in_public_repo": false
+}
